@@ -5,6 +5,17 @@ var autoprefixer = require('gulp-autoprefixer');
 // JS/Minification
 var uglify = require('gulp-uglify');
 
+var paths = {
+    scripts: [
+        'resources/assets/js/**/*.js',
+        'node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        'node_modules/jquery/dist/jquery.min.js'
+    ],
+    css: [
+        'resources/assets/sass/**/*.scss'
+    ]
+};
+
 // Compile, minify, and move our SASS/CSS in one fell swoop
 gulp.task('css', function() {
     gulp.src('resources/assets/sass/**/*.scss')
@@ -27,5 +38,12 @@ gulp.task('js:lib', function() {
     gulp.src('node_modules/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('public/js'));
 });
+
+/*
+gulp.task('watch', function() {
+    gulp.watch(paths.scripts, ['js:min', 'js:lib']);
+    gulp.watch(paths.css, ['css']);
+});
+*/
 
 gulp.task('default', ['css', 'js:lib', 'js:min']);
