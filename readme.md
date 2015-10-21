@@ -4,8 +4,9 @@ This project is aimed to give [Laravel](http://www.laravel.com) users a jumpstar
 
 ## Getting Started
 
-Once you have a local copy, a few things need to be done to get things going. First off, ensure you have [nodejs](http://www.nodejs.org) installed. This project utilizes npm and gulp, however you can always ignore those and use what you're comfortable with. Once you have nodejs, open your console.
+Once you have a local copy, a few things need to be done to get things going. First off, ensure you have [nodejs](http://www.nodejs.org) and [composer](http://getcomposer.org) installed. This project utilizes npm and gulp and laravel requires composer. You can always ignore npm and gulp and use what you're comfortable with. Once you have everything, open your console.
 ```sh
+$ composer install
 $ npm install --global gulp
 $ npm install
 ```
